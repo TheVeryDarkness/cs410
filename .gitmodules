@@ -1,0 +1,3 @@
+[submodule "PyPortfolioOpt"]
+	path = PyPortfolioOpt
+	url = https://github.com/robertmartin8/PyPortfolioOpt/
