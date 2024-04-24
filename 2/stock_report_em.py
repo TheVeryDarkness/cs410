@@ -51,6 +51,7 @@ def stock_zcfz_em(date: str = "20220331") -> pd.DataFrame:
 
     big_df.reset_index(inplace=True)
     big_df["index"] = big_df.index + 1
+    print(big_df.columns)
     big_df.columns = [
         "序号",
         "_",
@@ -183,6 +184,8 @@ def stock_lrb_em(date: str = "20081231") -> pd.DataFrame:
 
     big_df.reset_index(inplace=True)
     big_df["index"] = big_df.index + 1
+    print(big_df.columns)
+    big_df.to_excel("lrb.xlsx", index=False)
     big_df.columns = [
         "序号",
         "_",
@@ -304,6 +307,7 @@ def stock_xjll_em(date: str = "20220331") -> pd.DataFrame:
 
     big_df.reset_index(inplace=True)
     big_df["index"] = big_df.index + 1
+    print(big_df.columns)
     big_df.columns = [
         "序号",
         "_",
@@ -386,11 +390,11 @@ def stock_xjll_em(date: str = "20220331") -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    stock_zcfz_em_df = stock_zcfz_em(date="20220331")
-    print(stock_zcfz_em_df)
+    # stock_zcfz_em_df = stock_zcfz_em(date="20220331")
+    # print(stock_zcfz_em_df)
 
     stock_lrb_em_df = stock_lrb_em(date="20220331")
-    print(stock_lrb_em_df)
+    # print(stock_lrb_em_df)
 
-    stock_xjll_em_df = stock_xjll_em(date="20220331")
-    print(stock_xjll_em_df)
+    # stock_xjll_em_df = stock_xjll_em(date="20220331")
+    # print(stock_xjll_em_df)
